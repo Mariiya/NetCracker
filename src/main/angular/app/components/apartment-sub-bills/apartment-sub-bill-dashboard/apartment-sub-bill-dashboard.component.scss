@@ -1,0 +1,25 @@
+@import 'src/main/angular/theme';
+
+.container {
+  margin-top: -20px;
+  margin-left: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+::ng-deep {
+  .legend-labels {
+    background: none !important;
+    overflow: scroll;
+    max-width: 100%;
+
+  }
+}
+
+::ng-deep .ngx-charts {
+  text {
+    color: mat-color($my-app-foreground) !important;
+    font-size: 15px;
+  }
+}
+
