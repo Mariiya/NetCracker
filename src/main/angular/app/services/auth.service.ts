@@ -4,10 +4,12 @@ import {Observable, Subject, Subscription, throwError} from 'rxjs';
 import { sha256} from 'js-sha256';
 import {catchError} from "rxjs/operators";
 import {Account} from "../models/account";
+import {environment} from "../../environments/environment";
 
 
-const AUTH_API = 'http://localhost:8888/auth/';
-const USER_API = 'http://localhost:8888/auth/user/';
+const baseUrl=environment.url;
+const AUTH_API = baseUrl+'/auth/';
+const USER_API = baseUrl+'/auth/user/';
 
 
 const httpOptions = {
